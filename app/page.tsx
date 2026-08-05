@@ -12,9 +12,17 @@ export default function Home() {
       {/* Header / Navigation */}
       <header className="sticky top-0 z-50 backdrop-blur-md bg-plum/95 border-b border-gold/20 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-          <div className="flex items-center space-x-4">
+          <a 
+            href="#" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="flex items-center space-x-4 cursor-pointer group"
+            aria-label="Scroll to top of page"
+          >
             {/* Custom Brand Logo */}
-            <div className="w-12 h-12 rounded-full border border-gold/45 bg-plum-dark flex items-center justify-center p-1 overflow-hidden">
+            <div className="w-12 h-12 rounded-full border border-gold/45 bg-plum-dark flex items-center justify-center p-1 overflow-hidden transition-transform duration-300 group-hover:scale-105">
               <img 
                 src="/crafty_damsel_logo.jpg" 
                 alt="Crafty Damsel Logo" 
@@ -22,14 +30,14 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-serif tracking-widest uppercase font-semibold text-white leading-tight">
+              <span className="text-lg font-serif tracking-widest uppercase font-semibold text-white leading-tight group-hover:text-gold transition-colors">
                 {siteConfig.name}
               </span>
               <span className="text-[9px] tracking-widest uppercase text-gold font-medium">
                 by Beeba Sheikh
               </span>
             </div>
-          </div>
+          </a>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-10 text-xs tracking-widest uppercase font-medium text-stone-300">
@@ -301,13 +309,21 @@ export default function Home() {
       <footer className="bg-plum-dark text-stone-300 py-20 px-6 border-t border-gold/25">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <img src="/crafty_damsel_logo.jpg" alt="Crafty Damsel Logo" className="w-10 h-10 rounded-full border border-gold/30 p-0.5" />
+            <a 
+              href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="flex items-center space-x-3 cursor-pointer group"
+              aria-label="Scroll to top of page"
+            >
+              <img src="/crafty_damsel_logo.jpg" alt="Crafty Damsel Logo" className="w-10 h-10 rounded-full border border-gold/30 p-0.5 transition-transform duration-300 group-hover:scale-105" />
               <div className="flex flex-col">
-                <span className="text-md font-serif tracking-widest uppercase text-white font-semibold">{siteConfig.name}</span>
+                <span className="text-md font-serif tracking-widest uppercase text-white font-semibold group-hover:text-gold transition-colors">{siteConfig.name}</span>
                 <span className="text-[8px] tracking-widest uppercase text-gold">by Beeba Sheikh</span>
               </div>
-            </div>
+            </a>
             <p className="text-sm text-stone-300 max-w-sm leading-relaxed">
               Crafting premium custom works with artistic precision.
             </p>
