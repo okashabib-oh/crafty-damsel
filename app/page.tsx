@@ -4,6 +4,8 @@ import React from 'react';
 import { siteConfig } from '../config/site';
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+
   return (
     <div className="min-h-screen bg-linen text-stone-900 font-sans selection:bg-gold/20 antialiased">
       
@@ -29,6 +31,7 @@ export default function Home() {
             </div>
           </div>
           
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-10 text-xs tracking-widest uppercase font-medium text-stone-300">
             <a href="#gallery" className="hover:text-gold transition-colors">The Gallery</a>
             <a href="#services" className="hover:text-gold transition-colors">Bespoke Services</a>
@@ -36,13 +39,75 @@ export default function Home() {
             <a href="#contact" className="hover:text-gold transition-colors">Contact</a>
           </nav>
           
-          <a 
-            href="#contact" 
-            className="px-5 py-2.5 bg-gold hover:bg-gold-dark text-plum-dark text-xs tracking-widest uppercase transition-all duration-300 rounded-none font-semibold shadow-sm"
-          >
-            Contact Us
-          </a>
+          <div className="flex items-center space-x-4">
+            <a 
+              href="#contact" 
+              className="hidden sm:inline-block px-5 py-2.5 bg-gold hover:bg-gold-dark text-plum-dark text-xs tracking-widest uppercase transition-all duration-300 rounded-none font-semibold shadow-sm"
+            >
+              Contact Us
+            </a>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-stone-200 hover:text-gold focus:outline-none transition-colors"
+              aria-label="Toggle navigation menu"
+            >
+              {isMobileMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Navigation Dropdown */}
+        {isMobileMenuOpen && (
+          <nav className="md:hidden bg-plum-dark/98 border-t border-gold/20 px-6 py-6 space-y-4 text-xs tracking-widest uppercase font-medium text-stone-300">
+            <a 
+              href="#gallery" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block py-2 hover:text-gold transition-colors border-b border-gold/10"
+            >
+              The Gallery
+            </a>
+            <a 
+              href="#services" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block py-2 hover:text-gold transition-colors border-b border-gold/10"
+            >
+              Bespoke Services
+            </a>
+            <a 
+              href="#about" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block py-2 hover:text-gold transition-colors border-b border-gold/10"
+            >
+              Our Story
+            </a>
+            <a 
+              href="#contact" 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block py-2 hover:text-gold transition-colors border-b border-gold/10"
+            >
+              Contact
+            </a>
+            <div className="pt-2">
+              <a 
+                href="#contact" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block text-center px-5 py-3 bg-gold hover:bg-gold-dark text-plum-dark text-xs tracking-widest uppercase transition-all duration-300 font-semibold shadow-sm"
+              >
+                Contact Us
+              </a>
+            </div>
+          </nav>
+        )}
       </header>
 
       {/* Luxury Hero Section */}
