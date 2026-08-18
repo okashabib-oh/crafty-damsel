@@ -15,12 +15,12 @@ export const siteConfig = {
     {
       title: "Bespoke Commissions",
       description: "Individually handcrafted items tailored to your specific aesthetic, room styling, or personal milestone.",
-      priceHint: "Starting from PKR 5,000 (Custom quote based on materials)"
+      priceHint: "Enquire for custom project pricing"
     },
     {
       title: "Curation & Gift Boxes",
       description: "Luxurious, thoughtfully assembled collections designed to celebrate life's most meaningful moments.",
-      priceHint: "Starting from PKR 8,500"
+      priceHint: "Enquire for custom project pricing"
     },
     {
       title: "Creative Collaborations",

@@ -269,30 +269,29 @@ export default function Home() {
               </span>
             </a>
 
-            {/* WhatsApp Card */}
+            {/* TikTok Card */}
             <a
-              href={`https://wa.me/${siteConfig.contact.whatsapp.replace(/[^0-9]/g, '')}`}
+              href="https://www.tiktok.com/@crafty_damsel"
               target="_blank"
               rel="noreferrer"
               className="group relative flex flex-col items-center justify-center gap-6 p-10 border border-gold/20 bg-plum-dark/40 hover:bg-plum-dark/70 hover:border-gold/50 transition-all duration-500 overflow-hidden text-center"
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_center,rgba(37,211,102,0.08),transparent_70%)]"></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_center,rgba(105,201,208,0.08),transparent_70%)]"></div>
 
-              <div className="w-16 h-16 rounded-full border border-gold/30 bg-[#25d366]/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 rounded-full border border-gold/30 bg-[#010101]/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 24 24" fill="none">
-                  <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.19 1.6 6.01L0 24l6.15-1.61A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52z" fill="#25d366" opacity="0.2"/>
-                  <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.19 1.6 6.01L0 24l6.15-1.61A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.67-.5-5.25-1.44l-.38-.22-3.92 1.03 1.04-3.82-.25-.4A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.47-7.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.41-1.49-.89-.8-1.49-1.78-1.67-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51H7.1c-.2 0-.52.07-.79.37C6.04 8.4 5.3 9.1 5.3 10.57c0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#d4af37"/>
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z" fill="#d4af37" opacity="0.85"/>
                 </svg>
               </div>
 
               <div className="space-y-2">
-                <span className="text-xs tracking-widest uppercase text-gold font-semibold block">WhatsApp</span>
-                <p className="text-white font-serif text-xl font-light">{siteConfig.contact.whatsapp}</p>
-                <p className="text-stone-400 text-xs leading-relaxed">Message us directly to discuss your order, ask questions, or schedule a consultation.</p>
+                <span className="text-xs tracking-widest uppercase text-gold font-semibold block">TikTok</span>
+                <p className="text-white font-serif text-xl font-light">@crafty_damsel</p>
+                <p className="text-stone-400 text-xs leading-relaxed">Watch our craft videos, creative process reels, and inspiring bespoke design content.</p>
               </div>
 
               <span className="text-xs uppercase tracking-widest text-gold/70 group-hover:text-gold border-b border-gold/30 group-hover:border-gold pb-0.5 transition-all duration-300">
-                Chat Now →
+                View Profile →
               </span>
             </a>
           </div>
@@ -339,7 +338,7 @@ export default function Home() {
             <h4 className="text-xs uppercase tracking-widest text-gold font-semibold">Connect with Us</h4>
             <div className="space-y-2 text-sm">
               <a href={siteConfig.contact.instagram} target="_blank" rel="noreferrer" className="block hover:text-white transition-colors">Instagram</a>
-              <span className="block">WhatsApp: {siteConfig.contact.whatsapp}</span>
+              <a href="https://www.tiktok.com/@crafty_damsel" target="_blank" rel="noreferrer" className="block hover:text-white transition-colors">TikTok: @crafty_damsel</a>
             </div>
           </div>
         </div>
